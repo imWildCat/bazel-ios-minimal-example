@@ -29,3 +29,6 @@ Temporary Items
 bazel-*
 tmp/
 build/
+
+*.xcodeproj
+external

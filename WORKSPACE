@@ -1,3 +1,5 @@
+workspace(name = "bazel-ios-minimal-example")
+
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
@@ -33,3 +35,8 @@ load(
 )
 
 apple_support_dependencies()
+
+http_archive(
+    name = "xchammer",
+    urls = ["https://github.com/pinterest/xchammer/releases/download/v3.4.3-dev/xchammer.zip"],
+)
