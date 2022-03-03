@@ -6,7 +6,8 @@
 //
 
 #import "TestClass.h"
-@import SampleSwiftFramework;
+// @import SampleSwiftFramework;
+#import <SampleSwiftFramework/SampleSwiftFramework.h>
 
 @implementation TestClass
 

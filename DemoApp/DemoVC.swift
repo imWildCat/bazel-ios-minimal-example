@@ -1,8 +1,5 @@
-//
-//  Copyright (c) Microsoft Corporation. All rights reserved.
-//
-
 import UIKit
+import MixedFrameworkObjc
 
 class DemoVC: UIViewController {
   private let helloLabel: UILabel = {
@@ -15,6 +12,9 @@ class DemoVC: UIViewController {
   }()
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    let t = TestClass()
+    t.print()
 
     view.addSubview(helloLabel)
     NSLayoutConstraint.activate([

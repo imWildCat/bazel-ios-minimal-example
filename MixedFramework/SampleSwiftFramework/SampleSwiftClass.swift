@@ -1,9 +1,9 @@
 import Foundation
 
-public class SampleSwiftClass {
-  public init() {}
+public class SampleSwiftClass: NSObject {
+  public override init() {}
 
-  public func doSomething() {
+  @objc public func doSomething() {
     print("Hello from SampleSwiftClass!")
   }
 }

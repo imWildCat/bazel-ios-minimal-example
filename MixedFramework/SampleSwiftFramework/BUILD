@@ -12,8 +12,10 @@ TARGETS_UNDER_TEST_TAGS = [
 swift_library(
     name = "swift_fmwk_lib",
     srcs = glob(["*.swift"]),
+    generates_header = True,
     module_name = "SampleSwiftFramework",
-    tags = TARGETS_UNDER_TEST_TAGS,
+    visibility = ["//visibility:public"],
+    alwayslink = True,
 )
 
 apple_xcframework(

@@ -10,7 +10,9 @@ swift_library(
     srcs = glob(["**/*.swift"]),
     module_name = "DemoAppLibrary",
     visibility = ["//visibility:public"],
-    deps = [],
+    deps = [
+        "//MixedFramework:MixedFrameworkObjc"
+    ],
 )
 
 ios_application(
