@@ -32,3 +32,5 @@ build/
 
 *.xcodeproj
 external
+
+MixedFramework/SampleSwiftFramework.xcframework
