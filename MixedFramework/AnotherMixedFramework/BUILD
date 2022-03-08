@@ -1,7 +1,7 @@
 load("@build_bazel_rules_ios//rules:framework.bzl", "apple_framework")
 
 apple_framework(
-    name = "MixedFramework",
+    name = "AnotherMixedFramework",
     srcs = glob(
         [
             "src/*.swift",
@@ -10,8 +10,5 @@ apple_framework(
         ],
     ),
     platforms = {"ios": "13.0"},
-    visibility = ["//visibility:public"],
-    deps = [
-        "//MixedFramework/SampleSwiftFramework",
-    ],
+    visibility = ["//visibility:public"]
 )

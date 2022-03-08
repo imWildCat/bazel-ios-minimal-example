@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TestClass : NSObject
+@interface L3TestClass : NSObject
 - (void) print;
 @end
 

@@ -11,7 +11,7 @@ swift_library(
     module_name = "DemoAppLibrary",
     visibility = ["//visibility:public"],
     deps = [
-        "//MixedFramework:MixedFrameworkObjc"
+        "//MixedFramework:MixedFramework"
     ],
 )
 
@@ -22,9 +22,9 @@ ios_application(
         "iphone",
         "ipad",
     ],
-    frameworks = [],
+    # frameworks = ["//MixedFramework:MixedFramework"],
     infoplists = ["Info.plist"],
-    minimum_os_version = "14.0",
+    minimum_os_version = "13.0",
     visibility = ["//visibility:public"],
     deps = [
         ":DemoAppLibrary",

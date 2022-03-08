@@ -1,5 +1,5 @@
 import UIKit
-import MixedFrameworkObjc
+import MixedFramework
 
 class DemoVC: UIViewController {
   private let helloLabel: UILabel = {
@@ -13,7 +13,7 @@ class DemoVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let t = TestClass()
+    let t = L1TestClass()
     t.print()
 
     view.addSubview(helloLabel)

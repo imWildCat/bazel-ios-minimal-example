@@ -1,1 +1,22 @@
+# From: https://github.com/abrampers/lagu-sion-ios/
+build --verbose_failures
 build --apple_platform_type=ios
+
+build:device_debug --ios_multi_cpus=arm64,x86_64
+build:device_debug --compilation_mode=fastbuild
+build:device_adhoc --ios_multi_cpus=arm64,x86_64
+build:device_adhoc --compilation_mode=opt
+
+test --verbose_failures
+
+# Make all swiftc invocations use the same module cache.
+# Otherwise each invocation has to generate its own cache which can be very expensive for many invocations.
+build --features=swift.cacheable_swiftmodules
+build --features=swift.use_global_module_cache
+
+# tell swift compiler to generate indexstores while building v2
+# see rules_ios/docs/index_while_building.md for detailed description.
+build --features swift.use_global_index_store
+build --features swift.index_while_building
+
+

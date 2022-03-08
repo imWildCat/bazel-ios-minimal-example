@@ -3,6 +3,18 @@ workspace(name = "bazel-ios-minimal-example")
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+http_archive(
+    name = "build_bazel_rules_swift",
+    url = "https://github.com/bazelbuild/rules_swift/releases/download/0.24.0/rules_swift.0.24.0.tar.gz",
+)
+
+load(
+    "@build_bazel_rules_swift//swift:repositories.bzl",
+    "swift_rules_dependencies",
+)
+
+swift_rules_dependencies()
+
 git_repository(
     name = "build_bazel_rules_apple",
     branch = "master",
@@ -15,13 +27,6 @@ load(
 )
 
 apple_rules_dependencies()
-
-load(
-    "@build_bazel_rules_swift//swift:repositories.bzl",
-    "swift_rules_dependencies",
-)
-
-swift_rules_dependencies()
 
 load(
     "@build_bazel_rules_swift//swift:extras.bzl",
